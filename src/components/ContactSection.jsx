@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { ParallaxLayer } from "@react-spring/parallax";
 import { Typography, Box, Button, Stack } from "@mui/material";
