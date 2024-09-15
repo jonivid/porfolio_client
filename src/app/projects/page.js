@@ -1,5 +1,60 @@
-import React from 'react'
-//projects page
-export default function Page() {
-  return <h1>projects p;age!</h1>
+// app/page.js
+import ProjectCard from "../../components/projectCard/ProjectCard";
+
+export default function page() {
+  const projects = [
+    {
+      id: 1,
+      title: "Project 1",
+      description: "A brief description of Project 1",
+      previewImage: "/assets/website_ui_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui.mp4", // Replace with your actual video path
+    },
+    {
+      id: 2,
+      title: "Project 2",
+      description: "A brief description of Project 2",
+      previewImage: "/assets/website_ui_b&w_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui_B&W.mp4", // Replace with your actual video path
+    },
+    {
+      id: 3,
+      title: "Project 1",
+      description: "A brief description of Project 1",
+      previewImage: "/assets/website_ui_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui.mp4", // Replace with your actual video path
+    },
+    {
+      id: 4,
+      title: "Project 2",
+      description: "A brief description of Project 2",
+      previewImage: "/assets/website_ui_b&w_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui_B&W.mp4", // Replace with your actual video path
+    },
+    {
+      id: 5,
+      title: "Project 1",
+      description: "A brief description of Project 1",
+      previewImage: "/assets/website_ui_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui.mp4", // Replace with your actual video path
+    },
+    {
+      id: 6,
+      title: "Project 2",
+      description: "A brief description of Project 2",
+      previewImage: "/assets/website_ui_b&w_pic.jpg", // Replace with your actual preview image path
+      videoSrc: "/assets/website_ui_B&W.mp4", // Replace with your actual video path
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-800 py-12 px-4 flex flex-col items-center">
+      <h1 className="text-4xl font-bold text-white mb-10">My Projects</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </div>
+  );
 }

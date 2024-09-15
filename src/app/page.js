@@ -1,9 +1,10 @@
-import Home from "@/components/Home";
+import "../app/globals.css";
+import Home from "../components/home/page";
 
 export default function Page() {
   return (
-    <main>
+    <>
       <Home />
-    </main>
+    </>
   );
 }

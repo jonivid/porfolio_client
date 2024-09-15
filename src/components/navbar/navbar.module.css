@@ -1,0 +1,21 @@
+.nav {
+ background-color: white;
+  border-radius: 50px;
+  width: 80%;
+  color: black;
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0; /* Positions it at the very top */
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10px;
+  min-height: 60px; /* Adjust based on your design */
+  z-index: 1000; /* Ensure the navbar stays above other content */
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.linkTag {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
