@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import styles from "./page.module.css";
+import "./globals.css";
 
 // Dynamically import the Navbar component with no SSR
 const Navbar = dynamic(() => import("../components/navbar/Navbar"), {
