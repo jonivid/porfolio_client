@@ -1,0 +1,91 @@
+/* src/app/contact/ContactForm.module.css */
+.contactContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactForm .formGroup {
+  margin-bottom: 1.5em;
+}
+
+.contactForm label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+  border-color: #333;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.contactForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitButton {
+  padding: 12px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.successMessage {
+  color: #28a745; /* Green color for success */
+  margin-top: 1em;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.errorMessage {
+  color: #dc3545; /* Red color for error */
+  margin-top: 1em;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
