@@ -11,6 +11,7 @@ export default function DockIcon({
   mousex,
   magnification = 50,
   distance = 100,
+  onClick, // Accept onClick as a prop
 }) {
   const ref = useRef(null);
 
@@ -31,6 +32,9 @@ export default function DockIcon({
     damping: 12,
   });
 
+  // Determine if this is a link or a button based on the presence of href or onClick
+  const isLink = !!href;
+
   return (
     <motion.div
       ref={ref}
@@ -38,13 +42,27 @@ export default function DockIcon({
       className="flex items-center justify-center mx-2"
     >
       <Tooltip title={label} arrow>
-        <Link href={href}>
-          <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
+        {isLink ? (
+          // Render a navigational Link if href is provided
+          <Link href={href}>
+            <motion.div whileHover={{ scale: 1.1 }} className="cursor-pointer">
+              {React.cloneElement(icon, {
+                style: { color: "#343232", fontSize: "1.5rem" },
+              })}
+            </motion.div>
+          </Link>
+        ) : (
+          // Render a button-like element if onClick is provided
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            className="cursor-pointer"
+            onClick={onClick} // Handle the click event
+          >
             {React.cloneElement(icon, {
               style: { color: "#343232", fontSize: "1.5rem" },
             })}
           </motion.div>
-        </Link>
+        )}
       </Tooltip>
     </motion.div>
   );

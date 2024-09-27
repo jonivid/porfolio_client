@@ -1,8 +1,9 @@
+// layout.js
 import dynamic from "next/dynamic";
 import styles from "./page.module.css";
 import "./globals.css";
+import { ThemeProvider } from "next-themes"; // Import the ThemeProvider
 
-// Dynamically import the Navbar component with no SSR
 const Navbar = dynamic(() => import("../components/navbar/Navbar"), {
   ssr: false,
 });
@@ -11,14 +12,15 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* You can include meta tags, title, and other head elements here */}
         <title>Your App Title</title>
-        <meta name="description" content="Your app description" />
+        <meta name="description" content="Yehonatan" />
       </head>
       <body className={styles.container}>
-        {/* Dynamically loaded Navbar */}
-        <Navbar />
-        <main>{children}</main>
+        <ThemeProvider attribute="class">
+          {/* Dynamically loaded Navbar */}
+          <Navbar />
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

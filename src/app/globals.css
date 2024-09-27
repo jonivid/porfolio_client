@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* globals.css */
+
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --input-bg: #f0f0f0;
+  --input-border: #ccc;
+  --button-bg: #333;
+  --button-text: #fff;
+
+  
+  --form-box-bg-light: #f9f9f9; /* Light mode form background */
+  --form-box-bg-dark: #323030;  /* Dark mode form background */
+
+
+}
+
+.dark {
+  --bg-color: #18191b;
+  --text-color: #fff;
+  --input-bg: #2a2a31;
+  --input-border: #444;
+  --button-bg: #555;
+  --button-text: #fff;
+}
+
+/* General body background and text color */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Input fields and text areas */
+input,
+textarea {
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  border: 1px solid var(--input-border);
+}
+
+/* Button styles */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}

@@ -1,52 +1,5 @@
 .container {
-  /* width: 99vw; */
   height: 80vh;
-  background-color: #18181b;
-  color: white;
+  
   font-family: sans-serif;
-}
-/* 
-.slopeBegin {
-  height: 0;
-  width: 0;
-  borderStyle: solid;
-  borderWidth: 0 50vw 100vh 50vw;
-  borderColor: transparent transparent #8ED6FF transparent;
-}
-
-.slopeEnd {
-  height: 0;
-  width: 0;
-  borderStyle: solid;
-  borderWidth: 100vh 50vw 0 50vw;
-  borderColor: #8ED6FF transparent transparent transparent;
-}
-
-.text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 5em;
-}
-
-.number {
-  color: white;
-  font-weight: bold;
-}
-
-.pink {
-  background: linear-gradient(to right, #ff6b6b, #ff8e53);
-}
-
-.teal {
-  background: linear-gradient(to right, #43cea2, #185a9d);
-}
-
-.tomato {
-  background: linear-gradient(to right, #ff6347, #ff8e53);
-} */
-
-.main {
-  background-color: #18181b;
 }
