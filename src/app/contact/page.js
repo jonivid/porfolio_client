@@ -188,7 +188,7 @@ export default function ContactUs() {
         {/* Email */}
         <div className="flex items-center space-x-2">
           <EnvelopeIcon className="w-6 h-6 text-indigo-400" />
-          <span>yonivid@gmail.com</span>
+          <span>yonividalportfolio@gmail.com</span>
         </div>
 
         {/* Phone */}
